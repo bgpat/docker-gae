@@ -11,4 +11,4 @@ ADD ./server /server
 EXPOSE 8080 8000
 ENV OAUTH_IS_ADMIN=1
 ENTRYPOINT ["/google-cloud-sdk/bin/dev_appserver.py"]
-CMD ["--admin_host", "0.0.0.0", "--host", "0.0.0.0", "/server"]
+CMD ["--admin_host", "0.0.0.0", "--host", "0.0.0.0", "--enable_host_checking", "False", "/server"]
